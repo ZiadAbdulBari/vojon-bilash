@@ -1,0 +1,25 @@
+.signup-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+.logo{
+    text-align: center;
+}
+.logo img{
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.signup-form input, button{
+    width:  400px;
+}
+.signup-form button{
+    background-color: #FDAC00;
+    color: #B40101;
+    font-weight: bold;
+}
+.signup-img img{
+    max-width: 400px;
+}
