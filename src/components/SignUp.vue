@@ -9,16 +9,16 @@
                     <div>
 
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Name">
+                            <input v-model="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Name">
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email">
+                            <input v-model="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email">
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Enter Password">
+                            <input v-model="password" type="password" class="form-control" id="exampleFormControlInput1" placeholder="Enter Password">
                         </div>
                         <div class="mb-3">
-                            <button class="btn">Signup</button>
+                            <button @click="signup()" class="btn">Signup</button>
                         </div>
                     </div>
                 </div>
@@ -32,11 +32,34 @@
 </template>
 
 <script>
+import axios from 'axios';
     export default {
-        
+        data(){
+            return{
+                name:'',
+                email:'',
+                password:'',
+            }
+        },
+        methods:{
+            async signup(){
+                let url = "http://localhost:3000/user";
+                let data = {
+                                "name": this.name,
+                                "email": this.email,
+                                "password": this.password 
+                            }
+                let result = await axios.post(url,data);
+                console.log(result)
+                if(result.status==201){
+                   localStorage.setItem('user info', JSON.stringify(result.data));
+                }
+            }
+        }
+
     }
 </script>
 
-<style lang="scss" scoped>
+<style>
 
 </style>
