@@ -3,7 +3,7 @@ import SignUp from '@/components/SignUp.vue';
 import {createRouter,createWebHistory} from 'vue-router';
 
 
-let routers = [
+let routes = [
     {
         name: 'Home',
         component: Home,
@@ -18,7 +18,7 @@ let routers = [
 
 let router = createRouter({
     history:createWebHistory(),
-    routers
+    routes
 })
 
 export default router;
