@@ -4,4 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 import '@/assets/css/style.css'
 import 'axios';
-createApp(App).mount('#app')
+import router from '@/routers.js';
+
+createApp(App).use(router).mount('#app')
