@@ -1,23 +1,23 @@
-import SignUp from '@/components/SignUp.vue';
 import Home from '@/components/Home.vue';
-import {createRouter,createWebHashHistory} from 'vue-router';
+import SignUp from '@/components/SignUp.vue';
+import {createRouter,createWebHistory} from 'vue-router';
 
 
 let routers = [
     {
-        name:'Home',
+        name: 'Home',
         component: Home,
-        path:'/',
+        path: '/',
     },
     {
-        name:'SignUp',
-        component:SignUp,
-        path:'/signup',
+        name: 'SignUp',
+        component: SignUp,
+        path: '/signup',
     }
 ]
 
 let router = createRouter({
-    history:createWebHashHistory(),
+    history:createWebHistory(),
     routers
 })
 
