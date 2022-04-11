@@ -20,6 +20,10 @@
                         <div class="mb-3">
                             <button @click="signup()" class="btn">Signup</button>
                         </div>
+                        <div class="mb-3">
+                            Already have account? Please <router-link to="Login">Login</router-link>
+                        </div>
+
                     </div>
                 </div>
                 <div class="signup-img">
