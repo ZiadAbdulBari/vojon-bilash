@@ -53,11 +53,19 @@ import axios from 'axios';
                 let result = await axios.post(url,data);
                 console.log(result)
                 if(result.status==201){
-                    localStorage.setItem('user info', JSON.stringify(result.data));
+                    localStorage.setItem('user-info', JSON.stringify(result.data));
                     this.$router.push({
                        name:'Home'
                     })
                 }
+            }
+        },
+        mounted(){
+            let user = localStorage.getItem('user-info');
+            if(user){
+                this.$router.push({
+                    name:'Home'
+                })
             }
         }
 
