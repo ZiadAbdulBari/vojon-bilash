@@ -36,7 +36,7 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <button  class="btn">Login</button>
+                                <button @click="login()"  class="btn">Login</button>
                             </div>
                             <div class="mb-3">
                                 You have no account? Please <router-link to="SignUp">Signup</router-link>
@@ -53,8 +53,29 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     name:'Login',
+    data(){
+        return{
+            email:'',
+            password:'',
+        }
+    },
+    methods:{
+        async login(){
+            let url = `http://localhost:3000/user?email=${this.email}&password=${this.password}`
+            let response = await axios.get(url);
+            console.log(response);
+            if(response.status==200 && response.data.length!=0){
+                localStorage.setItem('isLogedIn',true);
+                this.$router.push({
+                    name:'Home'
+                })
+            }
+
+        }
+    }
 };
 </script>
 
