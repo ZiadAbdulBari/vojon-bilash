@@ -11,22 +11,22 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <router-link class="nav-link active" aria-current="page" to="/">Home</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Add</a>
+                            <router-link class="nav-link active" aria-current="page" to="/add">Add</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Update</a>
+                            <router-link class="nav-link active" aria-current="page" to="/update">Update</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Delete</a>
+                            <router-link class="nav-link active" aria-current="page" to="/">Delete</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Signup</a>
+                            <router-link class="nav-link active" aria-current="page" to="/signup">Signup</router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link to="/login" v-if="isLoggedin=='false'" class="nav-link active" aria-current="page" href="#">Signin</router-link>
+                            <router-link to="/login" v-if="isLoggedin=='false'" class="nav-link active" aria-current="page">Signin</router-link>
                             <a @click="logout()" v-else class="nav-link active" aria-current="page" href="#">Signout</a>
                         </li>
                     </ul>
