@@ -22,6 +22,13 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Delete</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Signup</a>
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="/login" v-if="isLoggedin=='false'" class="nav-link active" aria-current="page" href="#">Signin</router-link>
+                            <a @click="logout()" v-else class="nav-link active" aria-current="page" href="#">Signout</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -31,7 +38,26 @@
 
 <script>
     export default {
-       name:'Header', 
+        name:'Header',
+        data(){
+            return{
+                isLoggedin:'',
+            }
+        },
+        created(){
+            this.loginChecker();
+        },
+        methods:{
+            loginChecker(){
+                this.isLoggedin = localStorage.getItem('isLogedIn')
+            },
+            logout(){
+                localStorage.setItem('isLogedIn',false);
+                this.$router.push({
+                    name:'Login'
+                })
+            }
+        }
     }
 </script>
 
