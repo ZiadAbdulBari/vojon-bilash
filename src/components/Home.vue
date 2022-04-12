@@ -3,11 +3,11 @@
         <Header></Header>
         <div class="container">
             <!-- <h1>Welcome to Home Page</h1> -->
-            <div class="card" style="width: 18rem;" v-for="(i) in restaurants" :key="i">
-                <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card" style="width: 18rem;" v-for="(res,i) in restaurants" :key="i">
+                <img :src="res.image-url" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">{{i.name}}</h5>
-                    <p class="card-text">{{i.location}}</p>
+                    <h5 class="card-title">{{res.name}}</h5>
+                    <p class="card-text">{{res.location}}</p>
                     <a href="#" class="btn btn-primary">Detail</a>
                 </div>
             </div>

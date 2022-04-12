@@ -8,15 +8,6 @@
                             <img src="@/assets/images/logo.png" alt="" />
                         </div>
                         <div>
-                            <!-- <div class="mb-3">
-                                <input
-                                    v-model="name"
-                                    type="text"
-                                    class="form-control"
-                                    id="exampleFormControlInput1"
-                                    placeholder="Enter Name"
-                                />
-                            </div> -->
                             <div class="mb-3">
                                 <input
                                     v-model="email"
