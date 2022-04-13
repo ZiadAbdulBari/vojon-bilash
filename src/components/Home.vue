@@ -10,6 +10,7 @@
                         <h5 class="card-title">{{res.name}}</h5>
                         <p class="card-text">{{res.location}}</p>
                         <a href="#" class="btn btn-primary">Detail</a>
+                        <router-link :to="'/update/'+res.id"><a class="btn btn-primary">Update</a></router-link>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,54 @@
+{
+  "user": [
+    {
+      "name": "Ziad Abdul Bari",
+      "email": "ziad@ziad.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "name": "prity",
+      "email": "prity@prity.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "Prity",
+      "email": "prity@prity.com",
+      "password": "123",
+      "id": 3
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Chillox",
+      "location": "Banani",
+      "contact": "01xxxxxxxxxx",
+      "id": 1
+    },
+    {
+      "name": "Takeout",
+      "location": "Banani",
+      "contact": "01xxxxxxxx",
+      "id": 2
+    },
+    {
+      "name": "Barcode cafe",
+      "location": "Banani",
+      "contact": "01xxxxxxxxxxx",
+      "id": 3
+    },
+    {
+      "name": "BFC",
+      "location": "Dhanmondi",
+      "contact": "01xxxxxxxxxxx",
+      "id": 4
+    },
+    {
+      "name": "KFC",
+      "location": "Panthopath",
+      "contact": "01xxxxxxxxxx",
+      "id": 5
+    }
+  ]
+}
