@@ -50,6 +50,9 @@ import axios from 'axios';
                     this.address = response.data.location;
                     this.phone = response.data.contact;
                 })
+                .catch(error=>{
+                    console.log(error);
+                })
             },
             updateRestaurantData(){
                 let url = "http://localhost:3000/restaurants/"+this.id;
@@ -65,6 +68,9 @@ import axios from 'axios';
                             name:'Home'
                         })
                     }
+                })
+                .catch(error=>{
+                    console.log(error);
                 })
             }
         }

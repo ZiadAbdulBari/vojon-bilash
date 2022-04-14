@@ -16,12 +16,6 @@
                         <li class="nav-item">
                             <router-link class="nav-link active" aria-current="page" to="/add">Add</router-link>
                         </li>
-                        <!-- <li class="nav-item">
-                            <router-link class="nav-link active" aria-current="page" to="/update">Update</router-link>
-                        </li> -->
-                        <li class="nav-item">
-                            <router-link class="nav-link active" aria-current="page" to="/">Delete</router-link>
-                        </li>
                         <li class="nav-item">
                             <router-link class="nav-link active" aria-current="page" to="/signup">Signup</router-link>
                         </li>
